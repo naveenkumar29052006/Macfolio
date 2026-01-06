@@ -6,7 +6,6 @@ import gsap from 'gsap'
 import useWindowStore from '#store/window'
 import useLocationStore from '#store/location'
 import { AnimatePresence, motion } from 'framer-motion'
-import clsx from 'clsx'
 
 const Dock = () => {
     const { openWindow, focusWindow, minimizeWindow, closeWindow, windows } = useWindowStore()

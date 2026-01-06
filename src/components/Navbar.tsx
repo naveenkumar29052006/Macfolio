@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 import { navLinks } from '#constants/index.ts';
 import useWindowStore from '#store/window';
 import { useState, useRef, useEffect } from 'react';
-import { Wifi, Bluetooth, Search, User, Moon, ChevronRight, Lock, Battery, Headphones, Mouse } from 'lucide-react';
+import { Wifi, Bluetooth, Search, User, ChevronRight, Lock, Battery, Headphones, Mouse } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import clsx from 'clsx';
 
