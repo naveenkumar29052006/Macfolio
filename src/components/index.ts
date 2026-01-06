@@ -1,7 +1,10 @@
-import Navbar from "#components/Navbar.tsx";
-import Welcome from "#components/Welcome.tsx";
-import Dock from "#components/Dock.tsx"
-import WindowControlers from "#components/WindowControlers";
+import Navbar from "./Navbar.tsx";
+import Welcome from "./Welcome.tsx";
+import Dock from "./Dock.tsx";
+import Desktop from "./Desktop.tsx";
+import WindowControlers from "./WindowControlers.tsx";
+import Preloader from "./Preloader.tsx";
 
-export { Navbar, Welcome, Dock, WindowControlers };
+
+export { Navbar, Welcome, Dock, Desktop, WindowControlers, Preloader }
 

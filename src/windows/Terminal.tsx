@@ -20,19 +20,23 @@ const Terminal = ({ windowKey }: any) => {
         </p>
 
         <div className="label">
-          <p className="w-32"> Category  </p>
+          <p className="min-w-[140px]"> Category  </p>
           <p>Technologies</p>
 
         </div>
 
         <ul className="content">
           {techStack.map(({ category, items }) => (
-            <li key={category} className="flex items-center">
-              <Check className="check" size={20} />
-              <h3>{category}</h3>
-              <ul>
+            <li key={category} className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-0">
+              <div className="flex items-center min-w-[140px]">
+                <Check className="check mr-2" size={20} />
+                <h3 className="font-bold text-green-400">{category}</h3>
+              </div>
+              <ul className="flex flex-wrap gap-1 flex-1">
                 {items.map((item, index) => (
-                  <li key={index}>{item}{index < items.length - 1 ? "," : ""}</li>
+                  <li key={index} className="whitespace-nowrap">
+                    {item}{index < items.length - 1 ? "," : ""}
+                  </li>
                 ))}
               </ul>
 

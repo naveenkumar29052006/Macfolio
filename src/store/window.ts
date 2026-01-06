@@ -21,6 +21,7 @@ type WindowStore = {
   focusWindow: (key: WindowKey) => void;
   minimizeWindow: (key: WindowKey) => void;
   maximizeWindow: (key: WindowKey) => void;
+  minimizeAll: () => void;
 };
 
 const useWindowStore = create<WindowStore>()(
@@ -62,6 +63,13 @@ const useWindowStore = create<WindowStore>()(
     maximizeWindow: (key) =>
       set((state) => {
         state.windows[key].isMaximized = !state.windows[key].isMaximized;
+      }),
+
+    minimizeAll: () =>
+      set((state) => {
+        Object.keys(state.windows).forEach((key) => {
+          state.windows[key as WindowKey].isMinimized = true;
+        });
       }),
   }))
 );
