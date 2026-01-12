@@ -2,7 +2,7 @@ import { Navbar, Welcome, Dock, Desktop, Preloader } from '#components/index'
 import { Draggable } from 'gsap/all'
 import { Terminal, Safari, Resume, Finder, TxtFile, ImgFile, Contact, Photos } from '#windows/index'
 import gsap from 'gsap'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 
 
