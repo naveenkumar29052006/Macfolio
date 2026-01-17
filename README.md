@@ -1,74 +1,73 @@
-# Macfolio 🍎
+# React + TypeScript + Vite
 
-A stunning, interactive portfolio website inspired by the macOS user interface. Built with **React**, **TypeScript**, and **Vite**, offering a unique and engaging way to showcase projects and skills.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-![Macfolio Preview](/public/images/wallpaper.jpg)
+Currently, two official plugins are available:
 
-## 🚀 Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- **MacOS Desktop Experience**: Fully interactive desktop environment with a functional Dock and Menubar.
-- **Draggable Windows**: Open, minimize, maximize, and drag application windows just like a real OS.
-- **Apps & Utilities**:
-  - **Finder**: Browse projects (SolUPI, Coinverse) and personal info files.
-  - **Safari**: "Bio & Experience" browser with resume and social links.
-  - **Terminal**: Interactive shell displaying technical skills and dev tools.
-  - **Photos**: Dynamic gallery viewer using Vite's glob imports.
-  - **Contact**: Quick access to email and social profiles.
-- **Smooth Animations**: Powered by **Framer Motion** for fluid window transitions and interactions.
-- **State Management**: **Zustand** store for managing window states (open, focus, z-index).
-- **Responsive Design**: Optimized for different screen sizes (with limitations on very small mobile screens).
+## React Compiler
 
-## 🛠️ Tech Stack
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/) + [GSAP](https://gsap.com/)
-- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
-- **Icons**: [Lucide React](https://lucide.dev/)
+## Expanding the ESLint configuration
 
-## 📦 Installation & Setup
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/naveenkumar29052006/Macfolio.git
-    cd Macfolio
-    ```
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-2.  **Install dependencies**
-    ```bash
-    npm install
-    ```
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-3.  **Start the development server**
-    ```bash
-    npm run dev
-    ```
-
-4.  **Build for production**
-    ```bash
-    npm run build
-    ```
-
-## 📂 Project Structure
-
-```
-src/
-├── assets/         # Static assets (images, icons)
-├── components/     # UI components (Dock, Navbar, Window controls)
-├── constants/      # App data (socials, project details, tech stack)
-├── hoc/            # Higher-Order Components (WindowWrapper)
-├── store/          # Zustand stores (window management, location)
-├── windows/        # Application windows (Finder, Safari, Terminal, etc.)
-└── App.tsx         # Main entry point with desktop layout
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-## 👨‍💻 Author
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-**Naveen Kumar**
-- [GitHub](https://github.com/naveenkumar29052006)
-- [LinkedIn](https://www.linkedin.com/in/naveen-kumar-4217931ab/)
-- [Portfolio](https://macfolio-tau.vercel.app/)
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
----
-*Inspired by the clean and intuitive design of macOS.*
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
