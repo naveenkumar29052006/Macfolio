@@ -38,7 +38,7 @@ const navIcons = [
 const dockApps = [
   {
     id: "finder",
-    name: "Portfolio", // was "Finder"
+    name: "Projects", // was "Finder"
     icon: "finder.png",
     canOpen: true,
   },
@@ -338,7 +338,7 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://coinverse-alpha.vercel.app/",
+          href: "https://coinverse-nine.vercel.app/",
           position: "top-20 right-40",
         },
       ],
