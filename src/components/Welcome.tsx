@@ -1,5 +1,6 @@
 
 import { useRef } from 'react'
+import { startTour } from './index'
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react';
 type FontType = keyof typeof FONT_WEIGHTS;
@@ -95,6 +96,12 @@ const Welcome = () => {
 
       <p ref={subtitleRef}>{renderText("Hey I'm Naveen! Welcome to my", "text-3xl font-georama", 100)}</p>
       <h1 ref={titleRef} className='mt-7'>{renderText("portfolio.", "text-9xl italic font-georama", 400)}</h1>
+
+      <div className='mt-10 flex gap-4 z-10'>
+          <button onClick={startTour} className="px-6 py-3 bg-blue-500/90 hover:bg-blue-600 backdrop-blur-md text-white rounded-full font-medium transition-colors text-lg shadow-xl cursor-pointer pointer-events-auto">
+             Take a Tour
+          </button>
+      </div>
 
       <div className='small-screen'>
         <p> This Portfolio is designed to be used on a desktop or laptop.</p>

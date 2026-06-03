@@ -22,7 +22,7 @@ const Desktop = () => {
     };
 
     return (
-        <div ref={constraintsRef} className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
+        <div id="desktop-items" ref={constraintsRef} className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
             {locations.work.children.map((project) => (
                 <motion.div
                     key={project.id}

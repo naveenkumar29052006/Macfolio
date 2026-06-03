@@ -101,24 +101,24 @@ const blogPosts = [
 
 const techStack = [
   {
+    category: "AI / ML",
+    items: ["PyTorch", "TensorFlow", "LangGraph", "LangChain", "RAG", "LLMs", "Generative AI", "NLP", "Crew AI", "Vector Embeddings"],
+  },
+  {
     category: "Languages",
-    items: ["JavaScript", "TypeScript", "Python", "Rust", "SQL", "HTML", "CSS"],
+    items: ["Python", "TypeScript", "JavaScript", "Rust", "SQL"],
   },
   {
-    category: "Frontend",
-    items: ["React", "Next.js"],
+    category: "Frameworks",
+    items: ["FastAPI", "Next.js", "React", "Node.js", "scikit-learn"],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express JS"],
+    category: "Cloud & DevOps",
+    items: ["Docker", "Kubernetes", "AWS", "GitHub Actions"],
   },
   {
-    category: "Database",
-    items: ["MongoDB", "MySQL", "Prisma ORM"],
-  },
-  {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker", "Kubernetes", "Vercel", "Render"],
+    category: "APIs & Testing",
+    items: ["Playwright", "REST APIs"],
   },
 ];
 
@@ -128,7 +128,7 @@ const socials = [
     text: "Github",
     icon: "/icons/github.svg",
     bg: "#333",
-    link: "https://github.com/naveenkumar29052006",
+    link: "https://github.com/naveendhaterwal",
   },
   {
     id: 2,
@@ -218,14 +218,78 @@ const WORK_LOCATION = {
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
+    // ▶ Credit Risk AI
+    {
+      id: 7,
+      name: "Credit Risk AI",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-10 left-5",
+      windowPosition: "top-10 right-10",
+      children: [
+        {
+          id: 1,
+          name: "Project Details.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "PROJECT NAME:",
+            "AI-Powered Credit Risk Engine",
+            "",
+            "PROBLEM:",
+            "A gap exists between black-box machine learning and explainable AI in credit risk assessment, making decisions hard to justify and audit.",
+            "",
+            "SOLUTION:",
+            "An enterprise-grade platform combining a Multi-Model ML Ensemble, Retrieval-Augmented Generation (RAG), and Multi-Agent Orchestration to deliver high-fidelity, policy-compliant, and fully justifiable lending decisions.",
+            "",
+            "TECH STACK:",
+            "• Frontend: Next.js 14, Tailwind",
+            "• Backend: FastAPI",
+            "• ML/AI: scikit-learn, LangGraph, Groq Llama 3",
+            "• Database: Qdrant Vector DB",
+            "",
+            "KEY FEATURES:",
+            "• Algorithmic Disagreement Detection",
+            "• Agentic Workflow with LangGraph",
+            "• RAG-Powered Policy Compliance",
+            "• Explainable AI (XAI) Output",
+            "",
+            "LEARNINGS:",
+            "• Orchestrating specialized AI agents in a deterministic pipeline",
+            "• Synthesizing numerical ML scores into human-readable text"
+          ],
+        },
+        {
+          id: 2,
+          name: "Github Repo",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/naveendhaterwal/AI-Powered-Credit-Risk-Engine",
+          position: "top-10 right-20",
+        },
+        {
+          id: 3,
+          name: "Live Demo",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://gen-ai-2.vercel.app/",
+          position: "top-20 right-40",
+        },
+      ],
+    },
+
     // ▶ SolUPI
     {
       id: 5,
       name: "SolUPI",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-5",
-      windowPosition: "top-10 right-10",
+      position: "top-32 left-5",
+      windowPosition: "top-40 right-10",
       children: [
         {
           id: 1,
@@ -266,7 +330,7 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://github.com/naveenkumar29052006/SolUPI-V2",
+          href: "https://github.com/naveendhaterwal/SolUPI-V2",
           position: "top-10 right-20",
         },
         {
@@ -281,14 +345,75 @@ const WORK_LOCATION = {
       ],
     },
 
+    // ▶ Nosana Skills
+    {
+      id: 8,
+      name: "Nosana Skills",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-56 left-5",
+      windowPosition: "top-[280px] right-10",
+      children: [
+        {
+          id: 1,
+          name: "Project Details.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "PROJECT NAME:",
+            "Nosana Skill Marketplace",
+            "",
+            "PROBLEM:",
+            "Deploying AI workloads on decentralized GPUs lacks streamlined operational tools, making orchestration complex for developers and AI agents.",
+            "",
+            "SOLUTION:",
+            "Built an AI Compute Skill Marketplace with an npx CLI that allows easy discovery, installation, and deployment of 14 deterministic operational skills for the Nosana Network.",
+            "",
+            "TECH STACK:",
+            "• Frontend: Next.js",
+            "• Package / CLI: npx (Node.js)",
+            "• Ecosystem: Nosana Network",
+            "",
+            "KEY FEATURES:",
+            "• 1-Command CLI Installation (npx nos-skill)",
+            "• 14 Specialized Operational Skills (GPUs, Agent deployment, etc.)",
+            "• Seamless Agent Integration (Cursor, Claude, Windsurf, Antigravity)",
+            "",
+            "LEARNINGS:",
+            "• Developing decentralized infrastructure tools that interoperate with autonomous AI agents."
+          ],
+        },
+        {
+          id: 2,
+          name: "Github Repo",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/naveendhaterwal/Nosana-skill",
+          position: "top-10 right-20",
+        },
+        {
+          id: 3,
+          name: "Live Demo",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://nosana-skill.vercel.app/",
+          position: "top-20 right-40",
+        },
+      ],
+    },
+
     // ▶ Coinverse
     {
       id: 6,
       name: "Coinverse",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-32 left-5",
-      windowPosition: "top-40 right-10",
+      position: "top-80 left-5",
+      windowPosition: "top-[380px] right-10",
       children: [
         {
           id: 1,
@@ -329,7 +454,7 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://github.com/naveenkumar29052006/Coinverse",
+          href: "https://github.com/naveendhaterwal/Coinverse",
           position: "top-10 right-20",
         },
         {
@@ -364,19 +489,19 @@ const ABOUT_LOCATION = {
       image: "/images/adrian.jpg",
       description: [
         "INTRODUCTION:",
-        "Hi! I'm Naveen Kumar 👋, a passionate Full Stack Developer and Competitive Programmer who loves solving complex problems and building impactful web applications.",
+        "Hi! I'm Naveen Kumar 👋, an AI Engineer and Full-Stack Developer who loves solving complex problems and building impactful, intelligent applications.",
         "",
         "COMPETITIVE PROGRAMMING:",
         "I have a strong foundation in Data Structures and Algorithms, consistently honing my skills on platforms like LeetCode and Codeforces.",
         "• LeetCode Rating: 1400+",
         "• Codeforces Rating: 900+",
-        "• I enjoy the thrill of coding contests and optimizing solutions for efficiency.",
         "",
         "TECHNICAL EXPERTISE:",
-        "On the development side, I specialize in the MERN stack, Next.js, and TypeScript, focusing on creating performant, pixel-perfect user experiences.",
+        "I specialize in AI/ML technologies like RAG, LLMs, LangGraph, and PyTorch, combined with robust Full-Stack development using Python, FastAPI, Next.js, and TypeScript.",
         "",
-        "OFF DUTY:",
-        "When I'm not coding, you can find me exploring new technologies, debugging tricky logic, or striving to write cleaner, more maintainable code.",
+        "OPEN SOURCE & COMMUNITY:",
+        "• Contributed to the Nosana ecosystem by developing the Skill Marketplace and Nosana MCP for decentralized AI.",
+        "• Open Source Contributor at GetAlby (Bitcoin Lightning ecosystem) under Summer of Bitcoin 2025.",
       ],
     },
   ],

@@ -1,0 +1,78 @@
+/* Driver.js Custom Mac Theme */
+.mac-tour-theme {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+  color: #111 !important;
+  font-family: var(--font-georama), sans-serif !important;
+  padding: 18px 20px !important;
+}
+
+.mac-tour-theme .driver-popover-title {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  color: #1a1a1a !important;
+}
+
+.mac-tour-theme .driver-popover-description {
+  font-size: 0.9rem !important;
+  color: #4b5563 !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  margin-bottom: 16px !important;
+}
+
+.mac-tour-theme .driver-popover-footer {
+  margin-top: 12px !important;
+}
+
+.mac-tour-theme .driver-popover-footer button {
+  background: #3b82f6 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 6px 14px !important;
+  font-weight: 500 !important;
+  text-shadow: none !important;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3) !important;
+  transition: all 0.2s ease !important;
+}
+
+.mac-tour-theme .driver-popover-footer button:hover {
+  background: #2563eb !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.4) !important;
+}
+
+.mac-tour-theme .driver-popover-footer .driver-popover-prev-btn {
+  background: #f3f4f6 !important;
+  color: #374151 !important;
+  box-shadow: none !important;
+}
+
+.mac-tour-theme .driver-popover-footer .driver-popover-prev-btn:hover {
+  background: #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.mac-tour-theme .driver-popover-close-btn {
+  color: #9ca3af !important;
+  top: 12px !important;
+  right: 12px !important;
+}
+
+.mac-tour-theme .driver-popover-close-btn:hover {
+  color: #4b5563 !important;
+}
+
+/* Make arrow blend in */
+.mac-tour-theme .driver-popover-arrow-side-left,
+.mac-tour-theme .driver-popover-arrow-side-right,
+.mac-tour-theme .driver-popover-arrow-side-top,
+.mac-tour-theme .driver-popover-arrow-side-bottom {
+  border-color: rgba(255, 255, 255, 0.9) !important;
+}

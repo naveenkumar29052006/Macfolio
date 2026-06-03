@@ -39,7 +39,7 @@ const Resume = () => {
                 <WindowControlers windowKey="resume" />
                 <h2>Resume.pdf</h2>
 
-                <a href="/files/resume.pdf" download="Resume.pdf" className="cursor-pointer" title="Download Resume">
+                <a href="/files/resume.pdf" download="Resume-Naveen Kumar.pdf" className="cursor-pointer" title="Download Resume">
                     <Download className="icon" />
                 </a>
 

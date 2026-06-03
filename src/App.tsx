@@ -1,4 +1,4 @@
-import { Navbar, Welcome, Dock, Desktop, Preloader } from '#components/index'
+import { Navbar, Welcome, Dock, Desktop, Preloader, Tour } from '#components/index'
 import { Draggable } from 'gsap/all'
 import { Terminal, Safari, Resume, Finder, TxtFile, ImgFile, Contact, Photos } from '#windows/index'
 import gsap from 'gsap'
@@ -17,6 +17,8 @@ const App = () => {
       <AnimatePresence>
         {isLoading && <Preloader onFinish={() => setIsLoading(false)} />}
       </AnimatePresence>
+
+      {!isLoading && <Tour />}
 
       <Navbar />
       <Welcome />
